@@ -59,7 +59,7 @@ async function searchCountry(countryName) {
     show(spinnerEl);
 
     // Fetch country data (by name)
-    const data = await fetchJson(`https://restcountries.com/v3.1/name/${encodeURIComponent(cleaned)}`);
+     const data = await fetchJson(`https://restcountries.com/v3.1/name/${encodeURIComponent(cleaned)}?fullText=true`);
 
     // Choose the best match (first item)
     const country = data[0];
