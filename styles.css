@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f6f7fb;
+  color: #222;
+}
+
+header {
+  background: #111827;
+  color: white;
+  padding: 18px 16px;
+  text-align: center;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+#country-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#search-btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  opacity: 0.9;
+}
+
+/* 1) Loading Spinner (.spinner) - MUST have animation */
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 5px solid #cbd5e1;
+  border-top: 5px solid #2563eb;
+  border-radius: 50%;
+  margin: 14px auto;
+  animation: spin 1s linear infinite; /* Required */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 2) Country Card (.country-card) */
+.country-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  margin-bottom: 16px;
+}
+
+.country-card h2 {
+  margin-top: 0;
+}
+
+.country-flag {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-top: 10px;
+}
+
+/* 3) Border Grid (.border-grid) - MUST use grid or flex */
+.border-grid {
+  display: grid; /* Required: grid OR flex */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.border-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.border-card img {
+  width: 52px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+/* 4) Error Styling (.error) */
+.error {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #b91c1c; /* error color */
+  font-weight: 600;
+}
+
+/* 5) Hidden State */
+.hidden {
+  display: none;
+}
